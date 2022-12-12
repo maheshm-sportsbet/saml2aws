@@ -93,7 +93,8 @@ func NewHTTPClient(tr http.RoundTripper, opts *HTTPClientOptions) (*HTTPClient, 
 // Do do the request
 func (hc *HTTPClient) Do(req *http.Request) (*http.Response, error) {
 
-	req.Header.Set("User-Agent", fmt.Sprintf("saml2aws/1.0 (%s %s) Versent", runtime.GOOS, runtime.GOARCH))
+	//req.Header.Set("User-Agent", fmt.Sprintf("saml2aws/1.0 (%s %s) Versent", runtime.GOOS, runtime.GOARCH))
+	req.Header.Set("User-Agent", fmt.Sprintf("saml2aws/1.0 (%s %s) Versent", "linux", runtime.GOARCH))
 
 	var resp *http.Response
 	var err error
